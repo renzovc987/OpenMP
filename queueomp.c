@@ -87,7 +87,7 @@ int main(void) {
    int  src, mesg;
    struct queue_s* q_p = Allocate_queue();
 
-   printf("Operacion? (e, d, p, s, f, q)\n");
+   printf("Operacion? (e -> poner en cola, d -> retirar de la cola, p -> imprimir, s -> buscar, f -> liberar, q -> salir)\n");
    scanf(" %c", &op);
    while (op != 'q' && op != 'Q') {
       switch (op) {
