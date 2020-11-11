@@ -31,7 +31,7 @@ void Print_queue(struct queue_s* q_p) {
       printf("   src = %d, mesg = %d\n", curr_p->src, curr_p->mesg);
       curr_p = curr_p->next_p;
    }
-   printf("enqueued = %d, dequeued = %d\n", q_p->enqueued, q_p->dequeued);
+   printf("puesto en cola = %d, retirado de la cola = %d\n", q_p->enqueued, q_p->dequeued);
    printf("\n");
 }  
 
@@ -100,7 +100,7 @@ int main(void) {
          case 'd':
          case 'D':
             if (Dequeue(q_p, &src, &mesg))
-               printf("Dequeued src = %d, mesg = %d\n", src, mesg);
+               printf("Retirado de la cola src = %d, mesg = %d\n", src, mesg);
             else 
                printf("Queue vacia\n");
             break;
@@ -109,9 +109,9 @@ int main(void) {
             printf("Mesg?\n");
             scanf("%d", &mesg);
             if (Search(q_p, mesg, &src))
-               printf("Found %d from %d\n", mesg, src);
+               printf("Encontrado %d desde %d\n", mesg, src);
             else
-               printf("Didn't find %d\n", mesg);
+               printf("No encontrado %d\n", mesg);
             break;
          case 'p':
          case 'P':
@@ -122,7 +122,7 @@ int main(void) {
             Free_queue(q_p);
             break;
          default:
-            printf("%c comando no valido\n", op);
+            printf("%c Comando no valido\n", op);
             printf("Intente de nuevo\n");
       }  
       printf("Operacion? (e, d, p, s, f, q)\n");
