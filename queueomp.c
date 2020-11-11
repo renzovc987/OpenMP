@@ -125,7 +125,7 @@ int main(void) {
             printf("%c Comando no valido\n", op);
             printf("Intente de nuevo\n");
       }  
-      printf("Operacion? (e, d, p, s, f, q)\n");
+      printf("Operacion? (e -> poner en cola, d -> retirar de la cola, p -> imprimir, s -> buscar, f -> liberar, q -> salir)\n");
       scanf(" %c", &op);
    }  
 
